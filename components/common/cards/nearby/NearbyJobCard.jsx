@@ -4,14 +4,11 @@ import styles from "./nearbyjobcard.style";
 
 import { checkImageURL } from "../../../../utils";
 
-const NearbyJobCard = ({ job, handleNavigate }) => {
+const NearbyJobCard = ({ job, handleNavigation }) => {
     const callBack_Image =
         "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg";
     return (
-        <TouchableOpacity
-            style={styles.container}
-            onPress={() => handleCardPress(handleNavigate)}
-        >
+        <TouchableOpacity style={styles.container} onPress={handleNavigation}>
             <TouchableOpacity style={styles.logoContainer}>
                 <Image
                     source={{
